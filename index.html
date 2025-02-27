@@ -1,10 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Forecast</title>
 </head>
+
 <body>
-$END$
+<div class="container">
+  <div class="main-screen">
+    <div class="main-title">
+      <h1> Welcome to the forecast website! </h1>
+      <p> Input a country or coordinates of a place where you want to check the weather. </p>
+    </div>
+
+    <div class="form">
+      <div class="switch-container">
+        <input type="radio" id="city" name="inputType" value="city" checked>
+        <label for="city"> City </label>
+        <input type="radio" id="coordinates" name="inputType" value="coordinates">
+        <label for="coordinates"> Coordinates </label>
+        <div class="slider"></div>
+      </div>
+      <input type="text" id="inputText" placeholder="Enter city name">
+      <button type="button" id="search-button">Search</button>
+    </div>
+
+    <p id="error-message"></p>
+  </div>
+
+  <div class="weather-block-temp" style="display: none;">
+    <div class="weather-temp">
+      <p class="temp"></p>
+      <p class="real-feel"></p>
+    </div>
+    <img src="" alt="Here is a picture of weather" id="weather-img">
+    <div class="weather-temp-content">
+      <p class="date"></p>
+      <p class="city"></p>
+    </div>
+  </div>
+
+  <div class="weather-h-w-p" style="display: none;">
+    <div class="humidity">
+      <p></p>
+    </div>
+
+    <div class="wind">
+      <p></p>
+    </div>
+
+    <div class="pressure">
+      <p></p>
+    </div>
+  </div>
+
+  <div class="map" style="display: none;">
+    <img src="img/map.jpg" alt="map image" id="map-img">
+    <p style="font-size: 14px; color: #919090;"></p>
+  </div>
+
+  <div class="weather-today" style="display: none;">
+    <p><b>Hour forecast for today</b></p>
+    <div class="weather-cards" id="weather-cards"> </div>
+  </div>
+
+  <div class="weather-block" style="display: none;">
+    <p><b>Forecast for the next 6 days</b></p>
+    <div class="weather-next-days">
+      <div class="next-day"></div>
+      <div class="next-day"></div>
+      <div class="next-day"></div>
+      <div class="next-day"></div>
+      <div class="next-day"></div>
+      <div class="next-day"></div>
+      <div class="next-day"></div>
+    </div>
+  </div>
+</div>
+
+<script src="js/index.js"></script>
 </body>
 </html>
